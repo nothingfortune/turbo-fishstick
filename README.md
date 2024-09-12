@@ -1,64 +1,92 @@
 # MoErgo Glove80 Custom Configuration for ZMK
 
-![MoErgo Logo](moergo_logo.png)
-
-This repo is the official ZMK configuration of the MoErgo Glove80 wireless split contoured keyboard. Use it to develop your own keymap and easily build your own ZMK firmware to run on your Glove80.
-
-**NOTE: You can also customize the layout of your Glove80 keyboard with the Glove80 Layout Editor webapp. For most users Glove80 Layout Editor is the recommended and simpler option. More information is available at the official MoErgo Glove80 Support site (see resources below).**
-
-These steps will get you using your keymap on your keyboard in the fastest time possible. It uses the GitHub Actions feature to build your firmware online.
-
-If you are looking to dig deeper into ZMK and develop new functionality, it is recommended to follow the steps of installing ZMK as found on the official ZMK documentation site (linked below).
-
 ## Scope of Expected Behaviors
+
+glove80_mapping
+
+custom keyboard mapping and related behaviors tied to glove80 by MoErgo
+
+https://zmk.dev/docs/development/local-toolchain/setup
+
+https://my.glove80.com/
+
+Expected Behaviors
+
+//// Basic Behaviors ////
+
+1) Tapped
+2) Tapped and Held
+3) Held
+4) Double Tapped
+5) Triple Tapped
+
 
 //// Dynamic Macros ////
 
-Tap dance 2 taps dynamic macro - use case:
+Tap dance 2 taps dynamic macro - use case: just another hotkey and ability to assign macro
 
-tap dance 3 taps dynamic macro - use case:
+Tap dance 3 taps dynamic macro - use case: just another hotkey and ability to assign macro
 
-kp and 2 key dynamic macro - use case:
+Keypress and 2 key dynamic macro - use case: mainly cmd or windows shortcuts
 
-kp and 3 key dynamic macro - use case:
+Keypress and 3 key dynamic macro - use case: mainly cmd or windows shortcuts
 
-2 kp combined on single kp dynamic macro - use case:
+2 Keypress combined on single Keypress dynamic macro - use case: configurable shortcuts for various programs
 
-3 kp combined on single kp dynamic macro - use case:
+3 Keypress combined on single Keypress dynamic macro - use case: configurable shortcuts for various programs 
 
-Tap dance 2 taps dynamic macro - use case:
+Tap dance 2 taps dynamic macro - use case: mapping additional commands to existing keys without changing layers. more than likely tied in to other dynamic macros via nesting
 
-tap dance 3 taps dynamic macro - use case:
+tap dance 3 taps dynamic macro - use case: mapping additional commands to existing keys without changing layers. more than likely tied in to other dynamic macros via nesting
 
 //// Layer Modifiers ////
 
-Smart Shift with double tap command - use case: osx basic shortcuts
-
-Smart shift with double tap rctrl - use case: win basic shortcuts
-
-toggle layer on tap, momentary layer on hold - use case:
+Toggle layer on tap, momentary layer on hold - use case: layer layer shift with ability to both toggle and completely shift layers
 
 //// Smart Features ////
 
+Smart Shift with double tap command - use case: osx basic shortcuts with autoshift. Intent is to have the default smartshift with built in cmd without having to move keys. Default shortcuts for items like copy paste without having to move from the key
+
+Smart shift with double tap rctrl - use case: win basic shortcuts with autoshift. Intent is to have the default smartshift with built in cmd without having to move keys. Default shortcuts for items like copy paste without having to move from the key
+
 //// Basic Functionality ////
 
-mouse click(s) - use case:
+Mouse click(s) - use case: Existing. Code pulled from existing lib.
 
-mouse scrolls - use case:
+Mouse scrolls - use case: Existing. Code pulled from existing lib.
 
-keypress and momentary layer on hold - use case:
+Keypress and momentary layer on hold - use case: layer keystrokes with ability to temporarily 
 
-select and hold scroll arrows windows - use case:
+Select and hold scroll arrows windows - use case: press and hold arrow keys and select entire words for delete or copy
 
-double tap arrow to select to beginning of line - use case:
+Double tap arrow to select to beginning of line - use case:
 
-select and word scroll arrows OSX - use case:
+Select and word scroll arrows OSX - use case: press and hold arrow keys and select entire words for delete or copy
 
-sentence case?
+    Shortcut Command
 
-backspace with double tap hold deleting entire word - use case:
+Select and word scroll arrows WIN Specific - use case: press and hold arrow keys and select entire words for delete or copy
 
-layer 0 (mac) layer 1 (lower) layer 2 (lower) layer 3 (lower) layer 4 (lower) layer 5 (lower)
+    Shortcut Command (Windows): 
+
+Sentence case?
+
+Backspace with double tap hold deleting entire word - use case: OSX Specific - delete single characters on press, long press backspace entire words
+
+
+Backspace with double tap hold deleting entire word - use case: OSX Specific - delete single characters on press, long press backspace entire words
+
+    Shortcut Command(Windows): fn + Del
+
+
+layer 0 (mac)
+layer 1 (windows)
+layer 2 (symbols)
+layer 3 (numpad)
+layer 4 (movement)
+layer 5 (gaming)
+layer 6 (magic)
+layer 7 (lower)
 
 https://my.glove80.com/#/layout/user/90978696-a856-477e-b54b-2fbe60e731c7
 
